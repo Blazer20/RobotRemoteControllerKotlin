@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name" translatable="false">RobotRemoteControllerKotlin</string>
+
+    <string name="robot_name">Robot name</string>
+    <string name="speed_gears">Speed gears:</string>
+
+    <string name="alert_title">Bluetooth is settings</string>
+    <string name="alert_message">Bluetooth is not enabled. Do you want go to settings menu?</string>
+    <string name="alert_btn_positive">Settings</string>
+    <string name="alert_btn_negative">Cancel</string>
+    <string name="toast_enable">Bluetooth enabled.</string>
+    <string name="toast_bonded">Please bonded your device first</string>
+    <string name="toast_connection_success">Connection to bluetooth device successful</string>
+
+    <string name="navigation_category_language">Language settings</string>
+</resources>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:id="@+id/drawer_layout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/light_background">
+
+            <TextView
+                android:id="@+id/robotName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="90dp"
+                android:padding="10dp"
+                android:text="@string/robot_name"
+                android:textSize="30sp"
+                android:textColor="#FFFFFF"
+                android:focusable="false"
+                android:background="@drawable/robot_name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/pairBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/pair_button"
+                android:src="@drawable/ic_baseline_bluetooth_24"
+                android:textSize="20sp"
+                android:textColor="#55A4DE"
+                app:layout_constraintTop_toTopOf="@id/robotName"
+                app:layout_constraintLeft_toRightOf="@id/robotName"
+                app:layout_constraintBottom_toBottomOf="@id/robotName"/>
+
+            <ImageButton
+                android:id="@+id/forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/ic_baseline_arrow_drop_up_24"
+                android:background="@drawable/arrow_button_forward"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pairBtn" />
+
+            <ImageButton
+                android:id="@+id/leftward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow_button_left"
+                android:src="@drawable/ic_baseline_arrow_left_24"
+                android:layout_marginLeft="40dp"
+                app:layout_constraintTop_toBottomOf="@id/forward"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/forward"/>
+
+            <ImageButton
+                android:id="@+id/rightward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow_button_right"
+                android:src="@drawable/ic_baseline_arrow_right_24"
+                android:layout_marginRight="40dp"
+                app:layout_constraintTop_toBottomOf="@id/forward"
+                app:layout_constraintLeft_toRightOf="@id/forward"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/backward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/arrow_button_downward"
+                android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/forward" />
+
+            <TextView
+                android:id="@+id/speedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="@string/speed_gears"
+                android:textColor="#55A4DE"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@id/firstGear"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <Button
+                android:id="@+id/firstGear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:text="1"
+                android:textSize="30sp"
+                android:textColor="#55A4DE"
+                android:backgroundTint="#5A595B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/speedText"/>
+
+            <Button
+                android:id="@+id/secondGear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="2"
+                android:textSize="30sp"
+                android:textColor="#55A4DE"
+                android:backgroundTint="#5A595B"
+                app:layout_constraintBottom_toBottomOf="@id/firstGear"
+                app:layout_constraintTop_toTopOf="@id/firstGear"
+                app:layout_constraintLeft_toRightOf="@id/firstGear"/>
+
+            <Button
+                android:id="@+id/thirdGear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="3"
+                android:textSize="30sp"
+                android:textColor="#55A4DE"
+                android:backgroundTint="#5A595B"
+                app:layout_constraintBottom_toBottomOf="@id/secondGear"
+                app:layout_constraintTop_toTopOf="@id/secondGear"
+                app:layout_constraintLeft_toRightOf="@id/secondGear"/>
+
+            <Button
+                android:id="@+id/fourthGear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="4"
+                android:textSize="30sp"
+                android:textColor="#55A4DE"
+                android:backgroundTint="#5A595B"
+                app:layout_constraintBottom_toBottomOf="@id/thirdGear"
+                app:layout_constraintTop_toTopOf="@id/thirdGear"
+                app:layout_constraintLeft_toRightOf="@id/thirdGear"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/navigation_drawer_body"
+        app:menu="@menu/navigation_drawer_menu"
+        android:background="@color/white"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

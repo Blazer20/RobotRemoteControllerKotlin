@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="robot_name">Имя робота</string>
+    <string name="speed_gears">Cкоростные передачи:</string>
+
+    <string name="alert_title">Bluetooth настройки</string>
+    <string name="alert_message">Bluetooth не включен. Вы хотите перейти в меню настроек?</string>
+    <string name="alert_btn_positive">Настройки</string>
+    <string name="alert_btn_negative">Отмена</string>
+    <string name="toast_enable">Bluetooth включен.</string>
+    <string name="toast_bonded">Пожалуйста, сначала подключите свое устройство</string>
+    <string name="toast_connection_success">Подключение к устройству bluetooth выполнено успешно</string>
+
+    <string name="navigation_category_language">Языковые настройки</string>
+</resources>
